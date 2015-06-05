@@ -14,6 +14,7 @@ data$Date <- as.Date(data$Date,"%d/%m/%Y")
 
 #Plot histogram of global active power to png
 png(filename="plot1.png", width = 480, height = 480)
+par(bg = "transparent")
 hist(data$Global_active_power, col = "red", xlab = "Global Active Power (Kilowatts)", main = "Global Active Power")
 dev.off()
 

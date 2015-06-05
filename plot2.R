@@ -15,6 +15,7 @@ data$Clock <- paste(data$Date,data$Time)
 data$Clock <- as.POSIXct(data$Clock,format = "%Y-%m-%d %H:%M:%S")
 #Plot line graph of time vs. global active power to png
 png(filename="plot2.png", width = 480, height = 480)
+par(bg = "transparent")
 plot(data$Clock,data$Global_active_power,type="l", ylab = "Global Active Power (Kilowatts)", xlab = "")
 dev.off()
 
